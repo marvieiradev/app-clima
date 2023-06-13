@@ -26,11 +26,11 @@ pesquisa.addEventListener('click', () => {
         erro404.style.display = 'none'
         erro404.classList.remove('fadeIn')
 
-        const image = document.querySelector('.blox-clima img')
-        const temperatura = document.querySelector('.blox-clima temperatura')
-        const descricao = document.querySelector('.blox-clima descricao')
-        const humidade = document.querySelector('.detalhes-clima humidade span')
-        const ventos = document.querySelector('.detalhes-clima ventos span')
+        const image = document.querySelector('.box-clima img')
+        const temperatura = document.querySelector('.box-clima .temperatura')
+        const descricao = document.querySelector('.box-clima .descricao')
+        const humidade = document.querySelector('.detalhes-clima .humidade span')
+        const ventos = document.querySelector('.detalhes-clima .ventos span')
 
         switch (json.weather[0].main) {
             case 'Clear':
@@ -49,7 +49,7 @@ pesquisa.addEventListener('click', () => {
                 image.src = 'imagens/cloud.png'
                 break
 
-            case 'Haze':
+            case 'Mist':
                 image.src = 'imagens/mist.png'
                 break
 
@@ -66,7 +66,7 @@ pesquisa.addEventListener('click', () => {
         detalhesClima.style.display = '';
         boxClima.classList.add('fadeIn')
         detalhesClima.classList.add('fadeIn')
-        container.style.heigth = '590px';
+        container.style.height = '590px';
 
     })
 
