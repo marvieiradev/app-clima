@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #06283D;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 105px;
+    background: #fff;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto' sans-serif;
+    transition: 0.6s ease-out;
+}
+
+.box-pesquisa{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-pesquisa input{
+    color: #06283D;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 32px;
+}
+
+.box-pesquisa input::placeholder{
+    font-size: 20px;
+    font-weight: 500;
+    color: #06283D;
+    text-transform: capitalize;
+}
+
+.box-pesquisa button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283D;
+    background: #DFF6FF;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+.box-pesquisa button:hover{
+    color: #FFF;
+    background: #06283D;
+}
+
+.box-pesquisa i{
+    position: absolute;
+    color: #06283D;
+    font-size: 28px;
+}
+
+.box-clima{
+    text-align: center;
+}
+
+.box-clima img{
+    width: 60%;
+    margin-top: 30px;
+}
+
+.box-clima .temperatura{
+    position: relative;
+    color: #06283D;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: -16px;
+}
+
+.box-clima .temperatura span{
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+.box-clima .temperatura .descricao{
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.detalhes-clima{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.detalhes-clima .humidade, .detalhes-clima .ventos{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 100px;
+}
+
+.detalhes-clima .humidade{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+.detalhes-clima .ventos{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+.detalhes-clima i{
+    color: #06283D;
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+.detalhes-clima span{
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.detalhes-clima p{
+    color: #06283D;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.not-found{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+.not-found img{
+    width: 70%;
+}
+
+.not-found p{
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.box-clima, .detalhes-clima{
+    scale: 0;
+    opacity: 0;
+}
+
+.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn{
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}

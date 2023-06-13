@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>App Clima</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box-pesquisa">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text"  placeholder="Local">
+            <button class="fa-solid fa-magnifying-glass"></button>
+        </div>
+
+        <div class="not-found">
+            <img src="imagens/404.png" width="300px">
+            <p>Local Inválido</p>
+        </div>
+
+        <div class="box-clima">
+            <img src="">
+            <p class="temperatura"></p>
+            <p class="descricao"></p>
+        </div>
+
+        <div class="detalhes-clima">
+
+            <div class="humidade">
+                <i class="fa-solid fa-water"></i>
+                <div class="texto">
+                    <span></span>
+                    <p>Humidade</p>
+                </div>
+            </div>
+
+            <div class="ventos">
+                <i class="fa-solid fa-wind"></i>
+                <div class="texto">
+                    <span></span>
+                    <p>Velocidade dos Ventos</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/8e4a25e86e.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
