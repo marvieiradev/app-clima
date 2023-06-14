@@ -34,23 +34,23 @@ pesquisa.addEventListener('click', () => {
 
         switch (json.weather[0].main) {
             case 'Clear':
-                image.src = 'imagens/clear.png'
+                image.src = 'imagens/clear.svg'
                 break
 
             case 'Rain':
-                image.src = 'imagens/rain.png'
+                image.src = 'imagens/rain.svg'
                 break
 
             case 'Snow':
-                image.src = 'imagens/snow.png'
+                image.src = 'imagens/snow.svg'
                 break
 
             case 'Clouds':
-                image.src = 'imagens/cloud.png'
+                image.src = 'imagens/cloud.svg'
                 break
 
             case 'Mist':
-                image.src = 'imagens/mist.png'
+                image.src = 'imagens/mist.svg'
                 break
 
             default:
@@ -61,6 +61,8 @@ pesquisa.addEventListener('click', () => {
         descricao.innerHTML = `${json.weather[0].description}`
         humidade.innerHTML = `${json.main.humidity}%`
         ventos.innerHTML = `${parseInt(json.wind.speed)}Km/h`
+
+        //image.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@4x.png`
 
         boxClima.style.display = '';
         detalhesClima.style.display = '';

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="413px" height="413px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 412.07 412.07"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:none}
+    .fil2 {fill:#FEFEFE;fill-rule:nonzero}
+    .fil1 {fill:url(#id0);fill-rule:nonzero}
+    .fil3 {fill:url(#id1);fill-rule:nonzero}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="213.94" y1="230.11" x2="321.62" y2="122.43">
+   <stop offset="0" style="stop-opacity:1; stop-color:#FCB939"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#FFCE36"/>
+  </linearGradient>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="210.4" y1="302.83" x2="331.82" y2="181.42">
+   <stop offset="0" style="stop-opacity:1; stop-color:#D2E8F8"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#E2EEF9"/>
+  </linearGradient>
+ </defs>
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" width="412.07" height="412.07"/>
+  <g id="_2241490631072">
+   <path class="fil1" d="M321.62 176.27c0,29.74 -24.11,53.84 -53.84,53.84 -29.74,0 -53.84,-24.1 -53.84,-53.84 0,-29.74 24.1,-53.84 53.84,-53.84 29.73,0 53.84,24.1 53.84,53.84z"/>
+   <path class="fil2" d="M258.14 289.64c24.46,0 44.29,-19.83 44.29,-44.29 0,-24.46 -19.83,-44.29 -44.29,-44.29 -0.15,0 -0.3,0.02 -0.45,0.02 -3.94,-35.32 -33.89,-62.78 -70.26,-62.78 -28.72,0 -53.43,17.14 -64.49,41.74 -0.35,-0.01 -0.7,-0.03 -1.05,-0.03 -30.28,0 -54.82,24.54 -54.82,54.82 0,30.27 24.54,54.81 54.82,54.81l136.25 0z"/>
+   <path class="fil3" d="M317.19 289.64c15.36,0 27.82,-12.45 27.82,-27.81 0,-15.36 -12.46,-27.81 -27.82,-27.81 -0.09,0 -0.19,0.01 -0.28,0.01 -2.48,-22.18 -21.28,-39.42 -44.12,-39.42 -18.03,0 -33.55,10.76 -40.5,26.21 -0.22,-0.01 -0.43,-0.02 -0.66,-0.02 -19.01,0 -34.42,15.41 -34.42,34.42 0,19.01 15.41,34.42 34.42,34.42l85.56 0z"/>
+  </g>
+ </g>
+</svg>
