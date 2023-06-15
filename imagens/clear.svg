@@ -12,7 +12,7 @@ viewBox="0 0 412.07 412.07"
     .fil1 {fill:url(#id0);fill-rule:nonzero}
    ]]>
   </style>
-  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="88.3" y1="323.77" x2="323.78" y2="88.3">
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="70.64" y1="341.43" x2="341.44" y2="70.64">
    <stop offset="0" style="stop-opacity:1; stop-color:#FCB939"/>
    <stop offset="1" style="stop-opacity:1; stop-color:#FFCE36"/>
   </linearGradient>
@@ -20,8 +20,8 @@ viewBox="0 0 412.07 412.07"
  <g id="Camada_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
   <rect class="fil0" width="412.07" height="412.07"/>
-  <g id="_2241484550128">
-   <path class="fil1" d="M323.77 206.04c0,65.02 -52.71,117.73 -117.73,117.73 -65.03,0 -117.74,-52.71 -117.74,-117.73 0,-65.02 52.71,-117.74 117.74,-117.74 65.02,0 117.73,52.72 117.73,117.74z"/>
+  <g id="_2641181637280">
+   <path class="fil1" d="M341.43 206.04c0,74.77 -60.62,135.39 -135.39,135.39 -74.78,0 -135.4,-60.62 -135.4,-135.39 0,-74.78 60.62,-135.4 135.4,-135.4 74.77,0 135.39,60.62 135.39,135.4z"/>
   </g>
  </g>
 </svg>

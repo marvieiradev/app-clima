@@ -12,9 +12,9 @@ pesquisa.addEventListener('click', () => {
         return
     }
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&units=metric&APPID=${APIKey}`
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&units=metric&APPID=${APIKey}&lang=pt_br`
     ).then(response => response.json()).then(json => {
-        if (json.cod === '404' || json.cod === '401') {
+        if (json.cod === '404') {
             container.style.heigth = '400px'
             boxClima.style.display = 'none'
             detalhesClima.style.display = 'none'
@@ -31,10 +31,36 @@ pesquisa.addEventListener('click', () => {
         const descricao = document.querySelector('.box-clima .descricao')
         const humidade = document.querySelector('.detalhes-clima .humidade span')
         const ventos = document.querySelector('.detalhes-clima .ventos span')
+        const cidade = document.querySelector('.box-clima .cidade')
+        image.style.background = '#277DD9'
+
+        const data = { timezone: json.timezone };
+        function pad(val) {
+            return val.toString().padStart(2, '0');
+        }
+
+        const date = new Date();
+        date.setTime(date.getTime() + data.timezone * 1000);
+        let h = date.getUTCHours();
+        let m = date.getUTCMinutes();
+        let s = date.getUTCSeconds();
+        let dataAtual = `${pad(h)}:${pad(m)}hs`
+        //let dataAtual = `${pad(h)}:${pad(m)}:${pad(s)}`
+
+        let pfx = ''
+
+        if (h <= 5 || h >= 18) {
+            image.style.background = '#1F1F44'
+            pfx = '-n'
+        }
 
         switch (json.weather[0].main) {
             case 'Clear':
-                image.src = 'imagens/clear.svg'
+                image.src = 'imagens/clear' + pfx + '.svg'
+                break
+
+            case 'Clouds':
+                image.src = 'imagens/clouds' + pfx + '.svg'
                 break
 
             case 'Rain':
@@ -45,24 +71,33 @@ pesquisa.addEventListener('click', () => {
                 image.src = 'imagens/snow.svg'
                 break
 
-            case 'Clouds':
-                image.src = 'imagens/cloud.svg'
-                break
-
             case 'Mist':
                 image.src = 'imagens/mist.svg'
                 break
 
+            case 'Drizzle':
+                image.src = 'imagens/drizzle.svg'
+                break
+
+            case 'Thunderstorm':
+                image.src = 'imagens/thunder.svg'
+                break
+
+            case 'Tornado':
+                image.src = 'imagens/tornado.svg'
+                break
+
             default:
-                image.src = ''
+                image.src = 'imagens/default.svg'
         }
 
+        
         temperatura.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`
         descricao.innerHTML = `${json.weather[0].description}`
         humidade.innerHTML = `${json.main.humidity}%`
         ventos.innerHTML = `${parseInt(json.wind.speed)}Km/h`
 
-        //image.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@4x.png`
+        cidade.innerHTML = `${json.name} - ${json.sys.country} / MAX: ${parseInt(json.main.temp_min)}°C MIN: ${parseInt(json.main.temp_max)}°C \n ${dataAtual}`
 
         boxClima.style.display = '';
         detalhesClima.style.display = '';
@@ -71,7 +106,4 @@ pesquisa.addEventListener('click', () => {
         container.style.height = '590px';
 
     })
-
-
-
 })
