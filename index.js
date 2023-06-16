@@ -33,6 +33,8 @@ pesquisa.addEventListener('click', () => {
         const descricao = document.querySelector('.box-clima .descricao')
         const humidade = document.querySelector('.detalhes-clima .humidade span')
         const ventos = document.querySelector('.detalhes-clima .ventos span')
+        const min = document.querySelector('.detalhes-clima .max span')
+        const max = document.querySelector('.detalhes-clima .min span')
         const cidade = document.querySelector('.info-local .cidade')
         const dataHora = document.querySelector('.info-local .data-hora')
         image.style.background = '#277DD9'
@@ -104,6 +106,8 @@ pesquisa.addEventListener('click', () => {
         descricao.innerHTML = `${json.weather[0].description}`
         humidade.innerHTML = `${json.main.humidity}%`
         ventos.innerHTML = `${parseInt(json.wind.speed)}Km/h`
+        min.innerHTML = `${parseInt(json.main.temp_min)}°`
+        max.innerHTML = `${parseInt(json.main.temp_max)}°`
 
         cidade.innerHTML = `${json.name} - ${json.sys.country}`
         dataHora.innerHTML = `${dataAtual}`
@@ -114,7 +118,7 @@ pesquisa.addEventListener('click', () => {
         boxClima.classList.add('fadeIn')
         detalhesClima.classList.add('fadeIn')
         infoLocal.classList.add('fadeIn')
-        container.style.height = '610px';
+        container.style.height = '600px';
 
     })
 })
