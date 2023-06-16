@@ -2,6 +2,7 @@ const container = document.querySelector('.container')
 const pesquisa = document.querySelector('.box-pesquisa button')
 const boxClima = document.querySelector('.box-clima')
 const detalhesClima = document.querySelector('.detalhes-clima')
+const infoLocal = document.querySelector('.info-local')
 const erro404 = document.querySelector('.not-found')
 
 pesquisa.addEventListener('click', () => {
@@ -18,6 +19,7 @@ pesquisa.addEventListener('click', () => {
             container.style.heigth = '400px'
             boxClima.style.display = 'none'
             detalhesClima.style.display = 'none'
+            infoLocal.style.display = 'none'
             erro404.style.display = 'block'
             erro404.classList.add('fadeIn')
             return
@@ -31,7 +33,8 @@ pesquisa.addEventListener('click', () => {
         const descricao = document.querySelector('.box-clima .descricao')
         const humidade = document.querySelector('.detalhes-clima .humidade span')
         const ventos = document.querySelector('.detalhes-clima .ventos span')
-        const cidade = document.querySelector('.box-clima .cidade')
+        const cidade = document.querySelector('.info-local .cidade')
+        const dataHora = document.querySelector('.info-local .data-hora')
         image.style.background = '#277DD9'
 
         const data = { timezone: json.timezone };
@@ -41,11 +44,17 @@ pesquisa.addEventListener('click', () => {
 
         const date = new Date();
         date.setTime(date.getTime() + data.timezone * 1000);
+
+        const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+        const semana = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
+
+        let ano = date.getUTCFullYear();
+        let mes = date.getMonth();
+        let dia = date.getDate();
+        let sem = date.getDay();
         let h = date.getUTCHours();
         let m = date.getUTCMinutes();
-        let s = date.getUTCSeconds();
-        let dataAtual = `${pad(h)}:${pad(m)}hs`
-        //let dataAtual = `${pad(h)}:${pad(m)}:${pad(s)}`
+        let dataAtual = `${semana[sem]}, ${pad(dia)} ${meses[mes]} ${ano} | ${pad(h)}:${pad(m)}hs`
 
         let pfx = ''
 
@@ -91,19 +100,21 @@ pesquisa.addEventListener('click', () => {
                 image.src = 'imagens/default.svg'
         }
 
-        
         temperatura.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`
         descricao.innerHTML = `${json.weather[0].description}`
         humidade.innerHTML = `${json.main.humidity}%`
         ventos.innerHTML = `${parseInt(json.wind.speed)}Km/h`
 
-        cidade.innerHTML = `${json.name} - ${json.sys.country} / MAX: ${parseInt(json.main.temp_min)}°C MIN: ${parseInt(json.main.temp_max)}°C \n ${dataAtual}`
+        cidade.innerHTML = `${json.name} - ${json.sys.country}`
+        dataHora.innerHTML = `${dataAtual}`
 
         boxClima.style.display = '';
         detalhesClima.style.display = '';
+        infoLocal.style.display = '';
         boxClima.classList.add('fadeIn')
         detalhesClima.classList.add('fadeIn')
-        container.style.height = '590px';
+        infoLocal.classList.add('fadeIn')
+        container.style.height = '610px';
 
     })
 })

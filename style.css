@@ -78,7 +78,7 @@ body {
 
 .box-clima img{
     width: 60%;
-    margin-top: 30px;
+    margin-top: 20px;
     background-color: #277DD9;
     opacity: 70%;
     border-radius: 50%;
@@ -89,7 +89,7 @@ body {
     color: #06283D;
     font-size: 4rem;
     font-weight: 800;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: -16px;
 }
 
@@ -109,7 +109,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .detalhes-clima .humidade, .detalhes-clima .ventos{
@@ -138,7 +138,7 @@ body {
 
 .detalhes-clima span{
     color: #06283D;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
 }
 
@@ -146,6 +146,30 @@ body {
     color: #06283D;
     font-size: 14px;
     font-weight: 500;
+}
+
+.info-local{
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.info-local .local{
+    display: flex;
+    justify-content: center;
+}
+
+.info-local .local i{
+    color: #06283D;
+    font-size: 20px;
+    margin: 6px 5px;
+}
+.info-local p{
+    text-align: center;
+    color: #06283D;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 5px;
 }
 
 .not-found{
