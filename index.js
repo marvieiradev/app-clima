@@ -119,6 +119,5 @@ pesquisa.addEventListener('click', () => {
         detalhesClima.classList.add('fadeIn')
         infoLocal.classList.add('fadeIn')
         container.style.height = '600px';
-
     })
 })
