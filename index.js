@@ -101,7 +101,7 @@ pesquisa.addEventListener('click', () => {
             default:
                 image.src = 'imagens/default.svg'
         }
-        //Iniciando...
+        //Iniciando app...
         temperatura.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`
         descricao.innerHTML = `${json.weather[0].description}`
         humidade.innerHTML = `${json.main.humidity}%`
